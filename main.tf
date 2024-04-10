@@ -4,3 +4,9 @@ module "files" {
   content    = "Example for Task1"
   prefix     = "example-"
 }
+
+module "read" {
+  source     = "./modules/read"
+  file_names = module.files.file_names
+}
+
